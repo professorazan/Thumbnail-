@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azan Creator - Professional YT Thumbnail Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Azan Creator</h1>
+        <p>Your Professional YT Thumbnail Generator</p>
+    </header>
+    <main>
+        <div class="generator-container">
+            <div class="input-section">
+                <h2>Generate Your Thumbnail</h2>
+                <div class="prompt-group">
+                    <label for="prompt">Enter a single prompt:</label>
+                    <input type="text" id="prompt" placeholder="e.g., A futuristic city at night with neon lights">
+                </div>
+                <div class="settings-group">
+                    <div class="setting">
+                        <label for="ratio">Ratio:</label>
+                        <select id="ratio">
+                            <option value="16:9">16:9 (Standard)</option>
+                            <option value="4:3">4:3</option>
+                            <option value="1:1">1:1 (Square)</option>
+                        </select>
+                    </div>
+                    <div class="setting">
+                        <label for="quality">Quality:</label>
+                        <select id="quality">
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                    <div class="setting">
+                        <label for="theme">Theme:</label>
+                        <select id="theme">
+                            <option value="default">Default</option>
+                            <option value="cinematic">Cinematic</option>
+                            <option value="vibrant">Vibrant</option>
+                            <option value="minimalist">Minimalist</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="generate-btn">Generate Thumbnail</button>
+            </div>
+            <div class="output-section">
+                <h2>Generated Thumbnail</h2>
+                <div id="thumbnail-display">
+                    <p>Your generated thumbnail will appear here.</p>
+                </div>
+                <div id="re-edit-section" class="hidden">
+                    <h3>Re-edit Thumbnail</h3>
+                    <div class="prompt-group">
+                        <label for="re-edit-prompt">Modify your prompt:</label>
+                        <input type="text" id="re-edit-prompt">
+                    </div>
+                    <button id="regenerate-btn">Regenerate</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Made By Azan</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
