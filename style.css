@@ -1,110 +1,112 @@
+:root {
+    --royal-blue: #0046FF;
+    --gold: #FFD700;
+    --dark-gray: #1C1C1E;
+    --light-gray: #f4f4f4;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    line-height: 1.6;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
 }
 
 header {
-    background-color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    background-color: white;
+    padding: 1rem 2rem;
     border-bottom: 1px solid #ddd;
 }
 
-header h1 {
-    margin: 0;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo-a {
+    color: var(--royal-blue);
+    font-size: 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: var(--dark-gray);
 }
 
-header p {
-    margin: 0;
-    color: #666;
+.tagline {
+    font-size: 1.2rem;
+    color: var(--royal-blue);
 }
 
-main {
-    padding: 2rem;
-}
-
-.generator-container {
+.thumbnail-generator {
     display: flex;
+    justify-content: center;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.input-section, .output-section {
-    background-color: #fff;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 50%;
 }
 
-.input-section h2, .output-section h2 {
-    margin-top: 0;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 400px;
 }
 
-.prompt-group, .settings-group, .setting {
-    margin-bottom: 1.5rem;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-input[type="text"], select {
+textarea, select {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
 }
 
-button {
-    display: block;
-    width: 100%;
-    padding: 1rem;
+.dropdowns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#generateBtn {
+    background-color: var(--royal-blue);
+    color: white;
     border: none;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 1rem;
+    border-radius: 8px;
     font-size: 1rem;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3;
+#generateBtn:hover {
+    background-color: #003acc;
 }
 
-#thumbnail-display {
-    min-height: 200px;
+.thumbnail-preview {
+    width: 500px;
+    height: 281px; /* 16:9 aspect ratio */
     border: 2px dashed #ccc;
-    border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #888;
     position: relative;
-    overflow: hidden;
 }
 
-#thumbnail-display img {
+#imageContainer img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
 }
 
-#re-edit-section {
-    margin-top: 1.5rem;
+#loading {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
 }
 
 .hidden {
@@ -113,18 +115,10 @@ button:hover {
 
 footer {
     text-align: center;
-    padding: 1rem 0;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-    margin-top: 2rem;
-}
-
-@media (max-width: 768px) {
-    .generator-container {
-        flex-direction: column;
-    }
-
-    .input-section, .output-section {
-        width: 100%;
-    }
+    padding: 1rem;
+    background-color: var(--dark-gray);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
