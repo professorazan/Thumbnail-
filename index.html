@@ -3,70 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azan Creator - Professional YT Thumbnail Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Azan Thumbnail Maker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Azan Creator</h1>
-        <p>Your Professional YT Thumbnail Generator</p>
-    </header>
-    <main>
-        <div class="generator-container">
-            <div class="input-section">
-                <h2>Generate Your Thumbnail</h2>
-                <div class="prompt-group">
-                    <label for="prompt">Enter a single prompt:</label>
-                    <input type="text" id="prompt" placeholder="e.g., A futuristic city at night with neon lights">
-                </div>
-                <div class="settings-group">
-                    <div class="setting">
-                        <label for="ratio">Ratio:</label>
-                        <select id="ratio">
-                            <option value="16:9">16:9 (Standard)</option>
-                            <option value="4:3">4:3</option>
-                            <option value="1:1">1:1 (Square)</option>
-                        </select>
-                    </div>
-                    <div class="setting">
-                        <label for="quality">Quality:</label>
-                        <select id="quality">
-                            <option value="high">High</option>
-                            <option value="medium">Medium</option>
-                            <option value="low">Low</option>
-                        </select>
-                    </div>
-                    <div class="setting">
-                        <label for="theme">Theme:</label>
-                        <select id="theme">
-                            <option value="default">Default</option>
-                            <option value="cinematic">Cinematic</option>
-                            <option value="vibrant">Vibrant</option>
-                            <option value="minimalist">Minimalist</option>
-                        </select>
-                    </div>
-                </div>
-                <button id="generate-btn">Generate Thumbnail</button>
+        <nav>
+            <div class="logo">
+                <span class="logo-a">A</span>zan Thumbnail Maker
             </div>
-            <div class="output-section">
-                <h2>Generated Thumbnail</h2>
-                <div id="thumbnail-display">
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Create Eye-Catching Thumbnails Instantly</h1>
+            <p class="tagline">Powered by Azan AI</p>
+        </section>
+
+        <section class="thumbnail-generator">
+            <div class="controls">
+                <textarea id="prompt" placeholder="E.g., 'A robot unboxing a new smartphone with cinematic lighting'"></textarea>
+                <div class="dropdowns">
+                    <select id="aspectRatio">
+                        <option value="16:9">16:9 (YouTube)</option>
+                        <option value="9:16">9:16 (Stories)</option>
+                        <option value="1:1">1:1 (Square)</option>
+                    </select>
+                    <select id="theme">
+                        <option value="cinematic">Cinematic</option>
+                        <option value="minimal">Minimal</option>
+                        <option value="neon">Neon</option>
+                        <option value="dark">Dark</option>
+                        <option value="vivid">Vivid</option>
+                    </select>
+                    <select id="quality">
+                        <option value="720p">720p</option>
+                        <option value="1080p">1080p</option>
+                        <option value="4k">4K</option>
+                    </select>
+                    <select id="fontStyle">
+                        <option value="modern">Modern</option>
+                        <option value="bold">Bold</option>
+                        <option value="clean">Clean</option>
+                        <option value="serif">Serif</option>
+                    </select>
+                </div>
+                <button id="generateBtn">Generate Thumbnail</button>
+            </div>
+            <div class="thumbnail-preview">
+                <div id="imageContainer">
                     <p>Your generated thumbnail will appear here.</p>
                 </div>
-                <div id="re-edit-section" class="hidden">
-                    <h3>Re-edit Thumbnail</h3>
-                    <div class="prompt-group">
-                        <label for="re-edit-prompt">Modify your prompt:</label>
-                        <input type="text" id="re-edit-prompt">
-                    </div>
-                    <button id="regenerate-btn">Regenerate</button>
-                </div>
+                <div id="loading" class="hidden">Generating...</div>
             </div>
-        </div>
+        </section>
     </main>
+
     <footer>
-        <p>Made By Azan</p>
+        <p>&copy; 2024 Azan Thumbnail Maker</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
